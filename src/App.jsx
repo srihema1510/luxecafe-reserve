@@ -18,6 +18,14 @@ import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 
+// New Pages
+import Login from './pages/Login';
+import Register from './pages/Register';
+import Profile from './pages/Profile';
+import ReservationHistory from './pages/ReservationHistory';
+import AdminLogin from './pages/AdminLogin';
+import Dashboard from './pages/Dashboard';
+
 function App() {
   const [loading, setLoading] = useState(true);
   const location = useLocation();
@@ -54,6 +62,12 @@ function App() {
             <Route path="/reservation" element={<Reservation />} />
             <Route path="/gallery" element={<Gallery />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/history" element={<ReservationHistory />} />
+            <Route path="/admin" element={<AdminLogin />} />
+            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AnimatePresence>
